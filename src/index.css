@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body {
+  width: 100% ;
+  height: 100vh ;
+  background-image: url(https://phunugioi.com/wp-content/uploads/2020/02/mau-background-dep.jpg);
+  background-size: 100% ;
+  background-repeat: no-repeat;
+}
+
