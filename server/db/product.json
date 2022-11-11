@@ -1,0 +1,14 @@
+{
+	"product": [
+		{ "id": 1, "product_name": "Goulash Seasoning" },
+		{ "id": 2, "product_name": "Lamb - Leg, Diced" },
+		{ "id": 3, "product_name": "The Pop Shoppe - Root Beer" },
+		{ "id": 4, "product_name": "Longos - Chicken Caeser Salad" },
+		{ "id": 5, "product_name": "Liners - Banana, Paper" },
+		{ "id": 6, "product_name": "Amarula Cream" },
+		{ "id": 7, "product_name": "Cheese - Brie,danish" },
+		{ "id": 8, "product_name": "Rice - Jasmine Sented" },
+		{ "id": 9, "product_name": "Hersey Shakes" },
+		{ "id": 10, "product_name": "Campari" }
+	]
+}
