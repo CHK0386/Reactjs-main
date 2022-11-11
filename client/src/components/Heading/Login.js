@@ -196,7 +196,7 @@ function Login() {
         <script src="like_button.js"></script>
           <div class="main">
 
-        <form action="" method="POST" class="form" id="form-1">
+        <form action="http://localhost:3001/products" method="POST" class="form" id="form-1">
           <h3 class="heading"> Đăng ký</h3>
           {/* <p class="desc">Cùng nhau học lập trình miễn phí ❤️</p> */}
 
@@ -229,7 +229,7 @@ function Login() {
           <button class="form-submit">Đăng ký</button>
         </form>
 
-        <form action="" method="POST" class="form" id="form-2">
+        <form action="http://localhost:3001/login" method="POST" class="form" id="form-2">
           <h3 class="heading">Đăng nhập</h3>
           {/* <p class="desc">Cùng nhau học lập trình miễn phí ❤️</p> */}
 

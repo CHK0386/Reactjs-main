@@ -2,6 +2,9 @@ const express = require("express");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
+app.use(express.urlencoded({extended: false}))
+app.use(express.json())
+
 
 const { AppError } = require("./utils/AppError");
 const httpStatus = require("http-status");
@@ -11,12 +14,29 @@ const { loadDb } = require("./db");
 //use this template for calling fake db
 (async function () {
 	const db = await loadDb();
-	// console.log(db);
+	console.log(db);
 })();
 
 //ROUTE
-app.get("/products", (req, res, next) => {
+app.post("/products", (req, res, next) => {
 	try {
+		console.log(req.body)
+	} catch (error) {
+		next(error);
+	}
+});
+
+app.post("/login",async (req, res, next) => {
+	try {
+		let {email,password} = req.body
+		const db = await loadDb();
+let existUser = db.user.find(user => user.email == email)
+
+if(existUser) {
+	res.json({msg:"Thanh cong"})
+} else {
+	res.json({msg:"That bai"})
+}
 	} catch (error) {
 		next(error);
 	}
