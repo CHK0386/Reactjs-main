@@ -304,7 +304,8 @@
 			"id": 51,
 			"first_name": "Khang",
 			"email": "tinlun0386@gmail.com",
-			"gender": "Male"
+			"gender": "Male",
+			"password": 123
 		}
 	]
 }

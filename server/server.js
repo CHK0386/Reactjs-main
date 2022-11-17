@@ -31,8 +31,9 @@ app.post("/login",async (req, res, next) => {
 		let {email,password} = req.body
 		const db = await loadDb();
 let existUser = db.user.find(user => user.email == email)
+let existPassword = db.user.find(user => user.password == password)
 
-if(existUser) {
+if(existUser, existPassword) {
 	res.json({msg:"Thanh cong"})
 } else {
 	res.json({msg:"That bai"})
