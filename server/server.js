@@ -21,6 +21,8 @@ const { loadDb } = require("./db");
 app.post("/products", (req, res, next) => {
 	try {
 		console.log(req.body)
+
+		res.json({msg: "Register success"})
 	} catch (error) {
 		next(error);
 	}
