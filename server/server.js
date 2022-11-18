@@ -28,6 +28,11 @@ mongoose.connect('mongodb+srv://khang:123@cluster0.slg2yoy.mongodb.net/ReactMain
 });
 
 //ROUTE
+
+app.use('/api', (req,res,next) => {
+	res.send("Welcome to api")
+})
+
 app.post("/register", async (req, res, next) => {
 	try {
 		const {fullname, email, password}  = req.body;
