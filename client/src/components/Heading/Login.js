@@ -196,7 +196,7 @@ function Login() {
         <script src="like_button.js"></script>
           <div class="main">
 
-        <form action="http://localhost:3001/products" method="POST" class="form" id="form-1">
+        <form action="http://localhost:3001/register" method="POST" class="form" id="form-1">
           <h3 class="heading"> Đăng ký</h3>
           {/* <p class="desc">Cùng nhau học lập trình miễn phí ❤️</p> */}
 

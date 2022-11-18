@@ -9,20 +9,32 @@ app.use(express.json())
 const { AppError } = require("./utils/AppError");
 const httpStatus = require("http-status");
 //load db
-const { loadDb } = require("./db");
+// const { loadDb } = require("./db");
 
-//use this template for calling fake db
-(async function () {
-	const db = await loadDb();
-	console.log(db);
-})();
+// //use this template for calling fake db
+// (async function () {
+// 	const db = await loadDb();
+// 	console.log(db);
+// })();
+const mongoose = require('mongoose');
+//models
+const UserModel = require("./models/User.model")
+
+
+mongoose.connect('mongodb+srv://khang:123@cluster0.slg2yoy.mongodb.net/ReactMain?retryWrites=true&w=majority', (err) => {
+	if(err) console.log(err.message)
+
+	console.log('DB connected')
+});
 
 //ROUTE
-app.post("/products", (req, res, next) => {
+app.post("/register", async (req, res, next) => {
 	try {
-		console.log(req.body)
+		const {fullname, email, password}  = req.body;
 
-		res.json({msg: "Register success"})
+		const user = await UserModel.create({firstname: fullname, email, password})
+
+		res.json({msg: "Register success", user})
 	} catch (error) {
 		next(error);
 	}
