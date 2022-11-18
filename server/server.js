@@ -9,13 +9,13 @@ app.use(express.json())
 const { AppError } = require("./utils/AppError");
 const httpStatus = require("http-status");
 //load db
-// const { loadDb } = require("./db");
+const { loadDb } = require("./db");
 
-// //use this template for calling fake db
-// (async function () {
-// 	const db = await loadDb();
-// 	console.log(db);
-// })();
+//use this template for calling fake db
+(async function () {
+	const db = await loadDb();
+	console.log(db);
+})();
 const mongoose = require('mongoose');
 //models
 const UserModel = require("./models/User.model")
@@ -81,7 +81,7 @@ app.use(function (err, req, res, next) {
 		message = err.message;
 		status = err.statusCode
 			? err.statusCode
-			: httpStatus.StatusCodes.INTERNAL_SERVER_ERROR;
+			: httpStatus.INTERNAL_SERVER_ERROR;
 	}
 
 	res.status(status).json({
